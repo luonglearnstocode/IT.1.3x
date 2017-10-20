@@ -14,9 +14,13 @@ public class ArraysTest{
     }
 
     private static int indexMin(int[] array) {
+    	if (array == null || array.length == 0) {
+    		throw new IllegalArgumentException(); 
+    	}
+    	
     	int var = 0;
-	    for (int i = 1; i < array.length -1; i++) {
-	        if (array[i] < var) {
+	    for (int i = 1; i < array.length; i++) {
+	        if (array[i] < array[var]) {
 		        var = i;
 	        }
 	    }
@@ -24,10 +28,14 @@ public class ArraysTest{
     }
 
     private static int min(int[] array) {
+    	if (array == null || array.length == 0) {
+    		throw new IllegalArgumentException(); 
+    	}
+    	
 	    int var = array[0];
-	    for (int i = 1; i < array.length -1; i++) {
+	    for (int i = 1; i < array.length; i++) {
 	        if (array[i] < var) {
-		        var = i;
+		        var = array[i];
 	        }
 	    }
 	    return var;
