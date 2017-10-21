@@ -19,11 +19,23 @@ public class MyLinkedList<E>{
      * Insertion at the end 
      * Implement this method
      */
-     /*
+     
     public void insertEnd(E info){
+	    Node<E> newNode = new Node<>(info);
+	    
+	    if (first == null) {
+	    	first = newNode;
+	    } else {
+	    	Node<E> current = first;
+		    while (current.getNext() != null) {
+		    	current = current.getNext();
+		    }
+		    
+		    current.setNext(newNode);
+	    }   
 	    
     }
-    */
+    
     /*
      * Extraction of the first node
      */
