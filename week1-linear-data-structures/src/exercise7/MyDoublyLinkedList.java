@@ -71,22 +71,18 @@ public class MyDoublyLinkedList<E extends Comparable<E>>{
         		head = null;
         		tail = null;
         	} else {
-        		Node<E> current = head;
-        		while (current.getNext() != tail) {
-        			current = current.getNext();
-        		}
-        		tail = current;
+        		tail = tail.getPrev();
         		tail.setNext(null);
         	}
 	    }
         
         return data;
     }
+    
     /*
      * Delete all nodes with info equal to value
      * returns number of deleted nodes
      */
-     
      public int deleteAll(E info){
          int deleted = 0;
          
@@ -96,13 +92,13 @@ public class MyDoublyLinkedList<E extends Comparable<E>>{
         	 if (current.getInfo().equals(info)) {
         		 deleted++;
         		 
-        		 if (current.getNext() == null && current.getPrev() == null) {
+        		 if (current == head && current == tail) {
         			 head = null;
         			 tail = null;
-        		 } else if (current.getNext() == null) {
+        		 } else if (current == tail) {
         			 tail = current.getPrev();
         			 current.getPrev().setNext(null);
-        		 } else if (current.getPrev() == null) {
+        		 } else if (current == head) {
         			 head = current.getNext();
         			 current.getNext().setPrev(null);
         		 } else {
@@ -129,6 +125,7 @@ public class MyDoublyLinkedList<E extends Comparable<E>>{
 	    }
 	    System.out.println();
     }
+    
     /*
      * Print all list backwards
      */
