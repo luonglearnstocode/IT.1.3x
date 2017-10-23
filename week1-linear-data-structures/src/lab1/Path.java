@@ -29,6 +29,15 @@ public class Path {
         // TO DO (Part 3)
         // Learning concepts:
         // Insert first element in doubly linked list
+    	PathStep step = new PathStep(row, col);
+    	step.setNext(first);
+    	if (first != null) {
+    		first.setPrev(step);
+    	}
+    	first = step;
+    	if (last == null) {
+    		last = step;
+    	}
     }
     
     /**
@@ -38,6 +47,15 @@ public class Path {
         // TO DO (Part 3)
         // Learning concepts:
         // Insert last element in doubly linked list
+    	PathStep step = new PathStep(row, col);
+    	if (last == null) {
+    		first = step;
+    		last = step;
+    	} else {
+    		last.setNext(step);
+    		step.setPrev(last);
+    		last = step;
+    	}
     }
     
     /**
@@ -48,8 +66,18 @@ public class Path {
         // TO DO (Part 3)
         // Learning concepts:
         // Extract first element of doubly linked list
-
-        return null;    // TO DO: modify as appropriate
+    	int[] position = null;
+    	if (first != null) {
+    		position = new int[]{first.getRow(), first.getCol()};
+    		first = first.getNext();
+    		if (first == null) {
+    			last = null;
+    		} else {
+    			first.setPrev(null);
+    		}
+    	}
+    	
+        return position;
     }
     
     /**
@@ -61,8 +89,21 @@ public class Path {
         // TO DO (Part 3)
         // Learning concepts:
         // Extract last element of doubly linked list
-
-        return null;    // TO DO: modify as appropriate
+    	int[] position = null;
+    	
+    	if (last != null) {
+    		position = new int[]{last.getRow(), last.getCol()};
+    		
+    		if (first == last) { // path of 1 step
+    			first = null;
+    			last = null;
+    		} else {
+    			last = last.getPrev();
+    			last.setNext(null);
+    		}
+    	}
+    	
+        return position;    // TO DO: modify as appropriate
     }
     
     /**
@@ -83,6 +124,13 @@ public class Path {
         // Learning concepts:
         // traverse a linked list
         // Important: the Path must not be modified by the method!
+        PathStep current = first;
+        sPath += current.toString();
+        
+        while (current.getNext() != null) {
+        	sPath += ", " + current.getNext().toString();
+        	current = current.getNext();
+        }
         
         return sPath;
     }

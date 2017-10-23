@@ -33,7 +33,7 @@ public class MyDoublyLinkedList<E extends Comparable<E>>{
 	    if (tail == null){
             head = newNode;
 	        tail = newNode;
-	    }else{
+	    } else{
             tail.setNext(newNode);
             newNode.setPrev(tail);
 	        tail = newNode;
