@@ -9,4 +9,4 @@
 	* Exercise 6 Linked List with Head and Tail
 	* Exercise 7 Doubly Linked List
 	* Exercise 8 The Interface List<E> and the Class ArrayList<E> 
-	* LAB 1 Finding path in maze: modeling the maze
+	* LAB 1 Finding path in maze: modeling the maze using a bidimensional array. 
