@@ -166,7 +166,21 @@ public class Maze {
      * 
      */
     public void followPath(Path path) {
-        
+    	while (true) {
+    		int[] nextStep = path.extractFirst();
+    		if (nextStep == null) break;
+    		
+    		int row = nextStep[0];
+    		int col = nextStep[1];
+    		
+    		// invalid move
+    		if (row < 0 || row >= this.maze.length 
+    				|| col < 0 || col >= this.maze[0].length || this.maze[row][col] == MazeStatus.OBSTACLE) 
+    			break;
+    		
+    		if (this.maze[row][col] == MazeStatus.OPEN)
+    			this.maze[row][col] = MazeStatus.VISITED;
+    	}   
 		// TO DO (Part 4)
 		// Learning concepts to work on:
 		// extracting elements from list, accessing and modifying array positions
