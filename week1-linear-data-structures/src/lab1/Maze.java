@@ -143,8 +143,13 @@ public class Maze {
 		// TO DO (Part 2)
 		// Learning concepts to work on:
 		// array creation, initialization and limits checking
-
-		return null; // TO DO: change appropriately
+		row += mov.vShift();
+		col += mov.hShift();
+		if (row < 0 || row >= this.maze.length 
+				|| col < 0 || col >= this.maze[0].length) 
+			return null;
+		
+		return new int[]{row, col};
 	}
 	
 
