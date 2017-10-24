@@ -10,3 +10,11 @@
 	* Exercise 7 Doubly Linked List
 	* Exercise 8 The Interface List<E> and the Class ArrayList<E> 
 	* LAB 1 Finding path in maze: modeling the maze using a bidimensional array. 
+* Week 2: Stacks
+	* Exercise 1 Counting and Matching Simple Parenthesis
+	* Exercise 2 Matching Parenthesis 
+	* Exercise 3 Simple RPN Calculator
+	* Exercise 4 ArrayStack Implementation
+	* Exercise 5 Linked-list-based Implementation of Stacks 
+	* Exercise 6 Print stack elements with a recursive method
+	* LAB 2 Finding path in maze: path finding with a stack
