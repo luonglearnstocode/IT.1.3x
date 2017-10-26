@@ -18,3 +18,13 @@
 	* Exercise 5 Linked-list-based Implementation of Stacks 
 	* Exercise 6 Print stack elements with a recursive method
 	* LAB 2 Finding path in maze: path finding with a stack
+* Week 3: Queues
+	* Exercise 1 Implementation of a Queue of Integers using Arrays
+	* Exercise 2 Implementation of a Circular Queue of Integers using Arrays
+	* Exercise 3 Implementation of a Queue of Natural Numbers using Arrays
+	* Exercise 4 Implementation of a Queue with Linked Lists
+	* Exercise 5 Implementation of a Circular Queue with Linked Lists
+	* Exercise 6 Calculating if a Word or Phrase is a Palindrome
+	* Exercise 7 Implementation of a Deque with Linked Lists
+	* Exercise 8 Implementation of Stacks and Queues using a Deque based on Linked Lists
+	* LAB 3 Finding path in maze: breadth first search
