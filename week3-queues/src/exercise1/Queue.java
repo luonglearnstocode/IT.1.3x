@@ -76,7 +76,7 @@ public class Queue{
     /** Print the elements in the queue*/
     public void print(){
     	String toPrint = "Queue of " + numElements() + " element";
-    	toPrint += (numElements > 1 ? "s:" : ":");
+    	toPrint += (numElements > 1 ? "s: " : ": ");
         for (int i = head + 1; i <= tail; i++) {
         	toPrint += (elements[i] + ".");
         }
@@ -85,7 +85,7 @@ public class Queue{
         
     public static void main(String args[]){
  	   try{
- 		   Queue queue = new Queue(3);
+ 		   Queue queue = new Queue(10);
     
  		   queue.enqueue(1);
  		   queue.enqueue(2);
