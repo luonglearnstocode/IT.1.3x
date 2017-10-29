@@ -28,3 +28,13 @@
 	* Exercise 7 Implementation of a Deque with Linked Lists
 	* Exercise 8 Implementation of Stacks and Queues using a Deque based on Linked Lists
 	* LAB 3 Finding path in maze: breadth first search
+* Week 4: Trees
+	* Exercise 1 Binary Tree Interface
+	* Exercise 2 Recursive implementation of Binary Trees
+	* Exercise 3 Implementation of Tree Traversals
+	* Exercise 4 Implementation of Size and Height
+	* Exercise 5 Non-recursive implementation of Binary Trees
+	* Exercise 6 Implementation of Binary Search Trees
+	* Exercise 7 Implementation of Tree Traversals and Size in Binary Search Trees 
+	* Exercise 8 Implementation of information extraction in Binary Search Trees
+	* LAB 4: Exploring all paths in a maze
