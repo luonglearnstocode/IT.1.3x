@@ -1,4 +1,4 @@
-package exercise3;
+package exercise3and4;
 
 /*
  * Class that models exceptions in trees

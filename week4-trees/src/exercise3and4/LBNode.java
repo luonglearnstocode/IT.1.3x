@@ -1,4 +1,4 @@
-package exercise3;
+package exercise3and4;
 
 public class LBNode<E> {
 

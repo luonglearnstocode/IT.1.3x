@@ -1,4 +1,4 @@
-package exercise3;
+package exercise3and4;
 
 public class LBTree<E> implements BTree<E> {
     
@@ -112,13 +112,15 @@ public class LBTree<E> implements BTree<E> {
      * Tree properties (dummy implementations)
      */
     public int size() {
-        System.out.println("Returns the size of ["+root.getInfo()+"] tree");
-        return -1;
+//        System.out.println("Returns the size of ["+root.getInfo()+"] tree");
+    	if (root == null) return 0;
+    	return 1 + root.getLeft().size() + root.getRight().size();
     }
     
     public int height() {
-        System.out.println("Returns the height of ["+root.getInfo()+"] tree");
-        return -1;
+//        System.out.println("Returns the height of ["+root.getInfo()+"] tree");
+    	if (root == null) return -1;
+    	return 1 + Math.max(root.getLeft().height(), root.getRight().height());
     }
     
 }
