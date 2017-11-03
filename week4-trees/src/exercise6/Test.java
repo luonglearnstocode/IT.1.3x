@@ -9,6 +9,7 @@ package exercise6;
 		// FIFA World Rankings http://en.wikipedia.org/wiki/FIFA_World_Rankings (9 Feb 2017)
 		
 		BSTree<Integer> tree = new LBSTree();
+		
 		tree.insert("Argentina", 1635);
 		tree.insert("Brazil", 1529);
 		tree.insert("Germany", 1433);
@@ -20,8 +21,11 @@ package exercise6;
 		tree.insert("Uruguay", 1195);
 		tree.insert("Spain", 1168);
 		
-		System.out.println("Spain: " + tree.search("Spain"));
-		System.out.println("Italy: " + tree.search("Italy"));
+		System.out.println("PREORDER: " + tree.toStringPreOrder());
+		System.out.println("INORDER: " + tree.toStringInOrder());
+		System.out.println("POSTORDER: " + tree.toStringPostOrder());
+		
+		System.out.println("SIZE= " + tree.size());
 
 	}
 	

@@ -99,32 +99,55 @@ public class LBSTree<E> implements BSTree<E> {
 	}
 
 	/*
-	 * Searches and extracts information (dummy implementation)
+	 * Searches and extracts information 
 	 */
 	public E extract(Comparable key) {
 		return null;
 	}
 	
 	/*
-	 * Tree traversals (dummy implementation)
+	 * Tree traversals 
 	 */
 	public String toStringPreOrder() {
-		return "";
+		String toString = "";
+		
+		if (root == null) return "";
+		toString += root.toString() + " " +
+					getLeft().toStringPreOrder() +
+					getRight().toStringPreOrder();
+		
+		return toString;
 	}
 	
 	public String toStringInOrder() {
-		return "";
+		String toString = "";
+		
+		if (root == null) return "";
+		toString += getLeft().toStringInOrder() +
+					root.toString() + " " +
+					getRight().toStringInOrder();
+		
+		return toString;
 	}
 	
 	public String toStringPostOrder() {
-		return "";
+		String toString = "";
+		
+		if (root == null) return "";
+		toString += getLeft().toStringPostOrder() +
+					getRight().toStringPostOrder() +
+					root.toString() + " ";
+					
+		
+		return toString;
 	}	
 	
 	/*
-	 * Returns size of the tree (the number of pieces of information) (dummy implementation)
+	 * Returns size of the tree (the number of pieces of information)
 	 */
 	public int size() {
-		return -1;
+		if (isEmpty()) return 0;
+		return 1 + getLeft().size() + getRight().size();
 	}
 	
 }
