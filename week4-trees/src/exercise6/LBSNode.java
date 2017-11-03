@@ -5,7 +5,7 @@ public class LBSNode<E> {
 	  // Attributes
 	  private Comparable key;
 	  private E info;
-	  
+
 	  private BSTree<E> right;
 	  private BSTree<E> left;
 	  
@@ -48,7 +48,7 @@ public class LBSNode<E> {
 	  
 	  public BSTree<E> getRight() {
 		  return right;
-	  }
+	  }	  
 
 	  /* 
 	   * Returns a String representation

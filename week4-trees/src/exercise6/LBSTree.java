@@ -6,16 +6,19 @@ public class LBSTree<E> implements BSTree<E> {
 	 * Attribute: the node
 	 */
 	private LBSNode<E> root;
+	private boolean isRemoved;
 	
 	/*
 	 * Constructors
 	 */
 	public LBSTree(Comparable key, E info) {
 		root = new LBSNode<E>(key, info, new LBSTree<E>(), new LBSTree<E>());
+		isRemoved = false;
 	}
 	
 	public LBSTree() {
 		root = null;
+		isRemoved = false;
 	}
 	
 	/* 
@@ -94,7 +97,7 @@ public class LBSTree<E> implements BSTree<E> {
 		} else if(root.getKey().compareTo(key) < 0) {
 			return getRight().search(key);
 		} else {
-			return root.getInfo();
+			return isRemoved ? null : root.getInfo();
 		}		
 	}
 
@@ -102,7 +105,20 @@ public class LBSTree<E> implements BSTree<E> {
 	 * Searches and extracts information 
 	 */
 	public E extract(Comparable key) {
-		return null;
+		if (isEmpty()) return null;
+		
+		if(root.getKey().compareTo(key) > 0) {
+			return getLeft().extract(key);
+		} else if(root.getKey().compareTo(key) < 0) {
+			return getRight().extract(key);
+		} else {
+			if(!isRemoved) {
+				isRemoved = true;
+				return getInfo();
+			} else {
+				return null;
+			}
+		}	
 	}
 	
 	/*
@@ -112,7 +128,7 @@ public class LBSTree<E> implements BSTree<E> {
 		String toString = "";
 		
 		if (root == null) return "";
-		toString += root.toString() + " " +
+		toString += (isRemoved ? "" : root.toString() + " ") +
 					getLeft().toStringPreOrder() +
 					getRight().toStringPreOrder();
 		
@@ -124,7 +140,7 @@ public class LBSTree<E> implements BSTree<E> {
 		
 		if (root == null) return "";
 		toString += getLeft().toStringInOrder() +
-					root.toString() + " " +
+					(isRemoved ? "" : root.toString() + " ")  +
 					getRight().toStringInOrder();
 		
 		return toString;
@@ -136,7 +152,7 @@ public class LBSTree<E> implements BSTree<E> {
 		if (root == null) return "";
 		toString += getLeft().toStringPostOrder() +
 					getRight().toStringPostOrder() +
-					root.toString() + " ";
+					(isRemoved ? "" : root.toString() + " ");
 					
 		
 		return toString;
@@ -147,7 +163,7 @@ public class LBSTree<E> implements BSTree<E> {
 	 */
 	public int size() {
 		if (isEmpty()) return 0;
-		return 1 + getLeft().size() + getRight().size();
+		return (isRemoved ? 0 : 1) + getLeft().size() + getRight().size();
 	}
 	
 }

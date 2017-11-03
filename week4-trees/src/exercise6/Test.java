@@ -3,13 +3,12 @@ package exercise6;
 /*
  * Implementation of Binary Search Trees
  */ 
- public class Test {
+public class Test {
 
 	public static void main(String args[]) {
 		// FIFA World Rankings http://en.wikipedia.org/wiki/FIFA_World_Rankings (9 Feb 2017)
 		
 		BSTree<Integer> tree = new LBSTree();
-		
 		tree.insert("Argentina", 1635);
 		tree.insert("Brazil", 1529);
 		tree.insert("Germany", 1433);
@@ -21,12 +20,21 @@ package exercise6;
 		tree.insert("Uruguay", 1195);
 		tree.insert("Spain", 1168);
 		
-		System.out.println("PREORDER: " + tree.toStringPreOrder());
 		System.out.println("INORDER: " + tree.toStringInOrder());
-		System.out.println("POSTORDER: " + tree.toStringPostOrder());
+		System.out.println("SIZE= " + tree.size());
+
+		System.out.println("France: " + tree.extract("France"));
+		System.out.println("France: " + tree.search("France"));
 		
+		System.out.println("INORDER: " + tree.toStringInOrder());
+		System.out.println("SIZE= " + tree.size());
+		
+		System.out.println("Brazil: " + tree.extract("Brazil"));
+		System.out.println("Brazil: " + tree.search("Brazil"));
+
+		System.out.println("INORDER: " + tree.toStringInOrder());
 		System.out.println("SIZE= " + tree.size());
 
 	}
-	
+
 }
