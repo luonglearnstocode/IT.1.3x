@@ -28,7 +28,7 @@ public class TestSelectionSort{
      instead of the biggest one (as in the previous method) */
     public static void selectionSortDescendingOrder(int a[]){
     	int n = a.length;
-    	for (int i = 0; i < n; i++) {
+    	for (int i = 0; i < n - 1; i++) {
     		int m = 0;
     		for (int j = 1; j < (n - i); j++) {
     			if (a[j] < a[m]) {
