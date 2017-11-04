@@ -55,8 +55,24 @@ public class PathsTree {
 	}
 
 	public ArrayList<Path> findAllPaths(ArrayList<Path> paths) {
-		// TO DO
-		return null;
+		if (root != null) {
+			if (root.maze.getPosStatus(root.pos) == MazeStatus.GOAL) {
+				/* rebuild path */
+				Path path = new Path();
+				MazePosition current = root.pos;
+				while (current != null) {
+					path.insertFirst(current.getCoords()[0], current.getCoords()[1]);
+					current = current.getFrom();
+				}
+				paths.add(path);
+			} else {
+				for (PathsTree node : root.children) {
+					node.findAllPaths(paths);
+				}
+			}
+			return paths;
+		}
+		return paths;
 	}
 
 
