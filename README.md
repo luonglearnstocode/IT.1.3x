@@ -38,3 +38,18 @@
 	* Exercise 7 Implementation of Tree Traversals and Size in Binary Search Trees 
 	* Exercise 8 Implementation of information extraction in Binary Search Trees
 	* LAB 4: Exploring all paths in a maze
+* Week 5: Sorting
+	* Exercise 1 Optimized Bubble Sort 
+	* Exercise 2 Selection Sort Descending Order
+	* Exercise 3 Selection Sort Alternative Version
+	* Exercise 4 Insertion Sort Descending Order 
+	* Exercise 5 Insertion Sort Alternative Version
+	* Exercise 6 More Efficient Bubble Sort 
+	* Exercise 7 Recursive Bubble Sort
+	* Exercise 8 Cocktail Sort
+	* Exercise 9 Selection Sort moving the smallest and the biggest elements in the same iteration 
+	* Exercise 10 Heap sort Descending Order
+	* Exercise 11 Merge Sort Descending Order
+	* Exercise 12 Quick Sort Descending Order
+	* Exercise 13 Quicksort: Choosing another pivot
+	* LAB 5: Sorting paths
