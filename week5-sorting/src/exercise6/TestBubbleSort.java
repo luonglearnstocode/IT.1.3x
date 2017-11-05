@@ -46,21 +46,7 @@ public class TestBubbleSort{
     	int n=a.length;
 	    int num_iter=0;
 	    int nSwaps = 0;
-	    int lastSwap = -1;
-//	    for(int i=0; i<n; i++){
-//	    	boolean swapped = false;
-//	    	if (i == lastSwap) break;
-//	        for(int j=1; j<(n-i); j++){
-//	            num_iter++;
-//		        if(a[j-1]>a[j]){
-//		            nSwaps++;
-//		            swap(a,j-1,j);
-//		            swapped = true;
-//		            lastSwap = j > lastSwap ? j : lastSwap;
-//		        }
-//	        }
-//	        if (!swapped) break;
-//	    }
+	    int lastSwap;
 	    
 	    while (n != 0) {
 	    	lastSwap = 0;
