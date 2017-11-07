@@ -51,5 +51,4 @@
 	* Exercise 10 Heap sort Descending Order
 	* Exercise 11 Merge Sort Descending Order
 	* Exercise 12 Quick Sort Descending Order
-	* Exercise 13 Quicksort: Choosing another pivot
 	* LAB 5: Sorting paths
